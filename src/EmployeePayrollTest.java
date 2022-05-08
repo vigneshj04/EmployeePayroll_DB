@@ -5,7 +5,7 @@ public class EmployeePayrollTest {
     @Test
     public void givenSalary_MatchTheUpdatedSalary_ReturnTrue(){
         EmployeePayroll employee_Payroll = new EmployeePayroll();
-        int count = EmployeePayroll.updateEmployeePayroll("salary", 3000000,5);
+        int count = employee_Payroll.updateEmployeePayroll("salary", 3000000,5);
         Assertions.assertEquals(1,count);
     }
 
@@ -13,5 +13,10 @@ public class EmployeePayrollTest {
     public void givenName_GetSpecificResult_ReturnData(){
         EmployeePayroll employee_payroll_repository = new EmployeePayroll();
         employee_payroll_repository.retrieveDataByName("Terissa");
+    }
+    @Test
+    public void givenRangeOfDate_GetSpecificResult_ReturnData(){
+        EmployeePayroll employee_payroll_repository = new EmployeePayroll();
+        employee_payroll_repository.retrieveDataByDate("2022-05-02" , "2022-05-03");
     }
 }
