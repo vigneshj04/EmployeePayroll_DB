@@ -19,4 +19,19 @@ public class DBConnection {
         }
         return null;
     }
+
+    private static DBConnection dbConnection = null;
+    DBConnection()
+    {
+    }
+
+    // Static method
+    // Static method to create instance of Singleton class
+    public static DBConnection getInstance()
+    {
+        if (dbConnection == null)
+            dbConnection = new DBConnection();
+
+        return dbConnection;
+    }
 }
