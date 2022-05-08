@@ -19,4 +19,11 @@ public class EmployeePayrollTest {
         EmployeePayroll employee_payroll_repository = new EmployeePayroll();
         employee_payroll_repository.retrieveDataByDate("2022-05-02" , "2022-05-03");
     }
+
+    @Test
+    public void givenGender_GetCalculatedResult_ReturnData(){
+        EmployeePayroll employee_payroll_repository = new EmployeePayroll();
+        employee_payroll_repository.getCalculatedData("M");
+    }
+
 }
